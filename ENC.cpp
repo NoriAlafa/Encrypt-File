@@ -3,6 +3,8 @@
 using namespace std;
 
 int main(){
+    char playAgain='y'||'Y';
+    while(playAgain='y'||'Y'){
     string alfabet{"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"};
     string keys{"zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA"};
     char word;
@@ -23,6 +25,17 @@ int main(){
         }
     }
    cout<<encrypted_massage;
+        cout << "\n\nWould you like to try again? (y/n)";
+
+    cin >> playAgain;
+
+    if (playAgain != 'y'){
+        cout << "\n\nExiting program.";
+        playAgain = 'n';
+        return 0;
+        }
+        cin.ignore();
+    }
 
 
 }
